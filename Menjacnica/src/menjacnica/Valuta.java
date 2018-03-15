@@ -45,5 +45,59 @@ public class Valuta {
 		this.datum = datum;
 	}
 	
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + ((datum == null) ? 0 : datum.hashCode());
+		long temp;
+		temp = Double.doubleToLongBits(kursK);
+		result = prime * result + (int) (temp ^ (temp >>> 32));
+		temp = Double.doubleToLongBits(kursP);
+		result = prime * result + (int) (temp ^ (temp >>> 32));
+		temp = Double.doubleToLongBits(kursS);
+		result = prime * result + (int) (temp ^ (temp >>> 32));
+		result = prime * result + ((naziv == null) ? 0 : naziv.hashCode());
+		result = prime * result + ((skracenica == null) ? 0 : skracenica.hashCode());
+		return result;
+	}
+	
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Valuta other = (Valuta) obj;
+		if (datum == null) {
+			if (other.datum != null)
+				return false;
+		} else if (!datum.equals(other.datum))
+			return false;
+		if (Double.doubleToLongBits(kursK) != Double.doubleToLongBits(other.kursK))
+			return false;
+		if (Double.doubleToLongBits(kursP) != Double.doubleToLongBits(other.kursP))
+			return false;
+		if (Double.doubleToLongBits(kursS) != Double.doubleToLongBits(other.kursS))
+			return false;
+		if (naziv == null) {
+			if (other.naziv != null)
+				return false;
+		} else if (!naziv.equals(other.naziv))
+			return false;
+		if (skracenica == null) {
+			if (other.skracenica != null)
+				return false;
+		} else if (!skracenica.equals(other.skracenica))
+			return false;
+		return true;
+	}
+	
+	public String toString() {
+		return "Valuta [naziv=" + naziv + ", skracenica=" + skracenica + ", kursP=" + kursP + ", kursS=" + kursS
+				+ ", kursK=" + kursK + ", datum=" + datum + "]";
+	}
+	
+	
 	
 }
