@@ -12,36 +12,42 @@ public class Valuta {
 		return naziv;
 	}
 	public void setNaziv(String naziv) {
-		this.naziv = naziv;
+		if(naziv!=null)
+			this.naziv = naziv;
 	}
 	public String getSkracenica() {
 		return skracenica;
 	}
 	public void setSkracenica(String skracenica) {
+		if(skracenica!=null)
 		this.skracenica = skracenica;
 	}
 	public double getKursP() {
 		return kursP;
 	}
 	public void setKursP(double kursP) {
+		if(kursP>0)
 		this.kursP = kursP;
 	}
 	public double getKursS() {
 		return kursS;
 	}
 	public void setKursS(double kursS) {
+		if(kursS>0)
 		this.kursS = kursS;
 	}
 	public double getKursK() {
 		return kursK;
 	}
 	public void setKursK(double kursK) {
+		if(kursK>0)
 		this.kursK = kursK;
 	}
 	public GregorianCalendar getDatum() {
 		return datum;
 	}
 	public void setDatum(GregorianCalendar datum) {
+		if(datum!=null)
 		this.datum = datum;
 	}
 	
