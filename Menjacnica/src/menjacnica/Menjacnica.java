@@ -11,6 +11,7 @@ public class Menjacnica implements Specifikacija {
 
 	
 	public void dodajKurs(String naziv, double kursS, double kursP, double kursK, GregorianCalendar datum) {
+
 		for(int i=0; i<lista.size(); i++)
 			if(lista.get(i).equals(naziv) && datum!=null) {
 				lista.get(i).setKursK(kursK);
@@ -18,17 +19,29 @@ public class Menjacnica implements Specifikacija {
 				lista.get(i).setKursS(kursS);
 				lista.get(i).setDatum(datum);
 			}
-		
 	}
 
 
+
 	public void izbrisiKurs(String naziv, GregorianCalendar datum) {
-		
+
+		for(int i=0; i<lista.size(); i++)
+			if(lista.get(i).equals(naziv)) {
+				lista.get(i).setKursK(0);
+				lista.get(i).setKursP(0);
+				lista.get(i).setKursS(0);
+			}
+
 		
 	}
 
 	
 	public String vratiKurs(String naziv, GregorianCalendar datum) {
+
+		for(int i=0; i<lista.size(); i++)
+			if(lista.get(i).equals(naziv) && lista.get(i).getDatum().equals(datum))
+				return lista.get(i).toString();
+
 		
 		return null;
 	}
