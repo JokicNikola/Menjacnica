@@ -11,19 +11,25 @@ public class Menjacnica implements Specifikacija {
 
 	
 	public void dodajKurs(String naziv, double kursS, double kursP, double kursK, GregorianCalendar datum) {
-		// TODO Auto-generated method stub
+		for(int i=0; i<lista.size(); i++)
+			if(lista.get(i).equals(naziv) && datum!=null) {
+				lista.get(i).setKursK(kursK);
+				lista.get(i).setKursP(kursP);
+				lista.get(i).setKursS(kursS);
+				lista.get(i).setDatum(datum);
+			}
 		
 	}
 
 
 	public void izbrisiKurs(String naziv, GregorianCalendar datum) {
-		// TODO Auto-generated method stub
+		
 		
 	}
 
 	
 	public String vratiKurs(String naziv, GregorianCalendar datum) {
-		// TODO Auto-generated method stub
+		
 		return null;
 	}
 	
