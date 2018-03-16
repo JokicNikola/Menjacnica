@@ -18,6 +18,7 @@ public class Menjacnica implements Specifikacija {
 				lista.get(i).setKursP(kursP);
 				lista.get(i).setKursS(kursS);
 				lista.get(i).setDatum(datum);
+				System.out.println("Kurs je dodat");
 			}
 	}
 
@@ -30,6 +31,7 @@ public class Menjacnica implements Specifikacija {
 				lista.get(i).setKursK(0);
 				lista.get(i).setKursP(0);
 				lista.get(i).setKursS(0);
+				System.out.println("Kurs je izbrisan");
 			}
 
 		
