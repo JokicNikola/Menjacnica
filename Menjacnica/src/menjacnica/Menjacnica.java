@@ -13,7 +13,7 @@ public class Menjacnica implements Specifikacija {
 	public void dodajKurs(String naziv, double kursS, double kursP, double kursK, GregorianCalendar datum) {
 
 		for(int i=0; i<lista.size(); i++)
-			if(lista.get(i).equals(naziv) && datum!=null) {
+			if(lista.get(i).equals(naziv) && datum.after(new GregorianCalendar())) {
 				lista.get(i).setKursK(kursK);
 				lista.get(i).setKursP(kursP);
 				lista.get(i).setKursS(kursS);
