@@ -47,7 +47,7 @@ public class Valuta {
 		return datum;
 	}
 	public void setDatum(GregorianCalendar datum) {
-		if(datum!=null)
+		if(datum.after(new GregorianCalendar()))
 		this.datum = datum;
 	}
 	
